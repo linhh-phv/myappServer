@@ -23,17 +23,17 @@ router.get("/:postsId", async (req, res) => {
 });
 
 // add posts
-router.post("/", async (req, res) => {
-  const { title, description, date } = req.body;
-  console.log(title, description, date);
-  const post = new Post({ title, description, date });
-  try {
-    const savePosts = await post.save();
-    res.json(savePosts);
-  } catch (error) {
-    res.json({ message: err });
-  }
-});
+// router.post("/", async (req, res) => {
+//   const { title, description, date } = req.body;
+//   console.log(title, description, date);
+//   const post = new Post({ title, description, date });
+//   try {
+//     const savePosts = await post.save();
+//     res.json(savePosts);
+//   } catch (error) {
+//     res.json({ message: err });
+//   }
+// });
 
 //delete posts with postsId
 router.delete("/:postsId", async (req, res) => {
