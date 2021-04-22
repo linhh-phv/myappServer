@@ -20,7 +20,7 @@ app.use("/posts", require("./routes/posts"));
 
 //router test
 app.get("/", function (req, res) {
-  res.send("<h2>Home</h2>");
+  res.send("<h2>API linhh.phv</h2>");
 });
 
 // connect db
