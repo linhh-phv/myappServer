@@ -16,7 +16,8 @@ app.use(cors());
 app.use(upload.array());
 
 // import router
-app.use("/posts", require("./routes/posts"));
+app.use("/posts", require("./routes/posts/posts"));
+app.use("/auth", require("./routes/auth"));
 
 //router test
 app.get("/", function (req, res) {
@@ -29,6 +30,7 @@ mongoose
   .connect(DB_URL, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
+    useCreateIndex: true,
   })
   .then(() => console.log("Connected to mongo DB"))
   .catch((err) => console.log("connect mongo DB failed", err));
